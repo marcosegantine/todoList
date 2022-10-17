@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Indie+Flower&display=swap');
+
+*, body, img, button, input, h1, ul, li, a {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+textarea:focus, input:focus, select:focus {
+  box-shadow: 0 0 0 0;
+  border: 0 none;
+  outline: 0;
+} 
+
+body {
+  min-height: 100vh;
+  background-image: linear-gradient(45deg, rgb(25, 25, 209),lightblue);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+header {
+  min-width: 500px;
+  text-align: center;
+  padding: 30px;
+  font-size: 2.5rem;
+  font-family: 'Courgette', cursive;;
+}
+
+.input-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.input-form {
+  background: #6781F1;
+  border-radius: 5px;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  flex: 1 1 400px;
+}
+
+.inputToDo{
+  padding: 0.5rem;
+  margin-left: 5px;
+  font-size: 1.125rem;
+  /* min-width: 400px; */
+  border: none;
+  background: #6781F1;
+  color: white;
+}
+
+.btnInput {
+  margin-right: 5px;
+  font-size: 2rem;
+  padding: 5px;
+  border: none;
+  background: #6781F1;
+}
+
+.btnInput:hover {
+  color: rgba(0, 0, 0, 0.447);
+}
+
+select {
+  background-color: #6780f161;
+  color: white;
+}
+
+select option {
+  background-color: #6781F1;
+}
+
+.filter-todo {
+  padding: 0.725rem;
+  border-radius: 5px;
+  font-size: 1.125rem;
+  border: none;
+}
+
+.inputToDo::-webkit-input-placeholder{
+  color: rgb(84, 84, 84);
+}
+
+/* estilizacao da lista */
+
+.todoList-container {
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.todoList {
+  width: 960px;
+  padding-top: 60px;
+}
+.todoDiv {
+  animation: entrada 0.7s ease;
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  background-color: #6781F1;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  
+  
+}
+
+.todoItem {
+  font-size: 1.5rem;
+  font-family: 'Indie Flower', cursive;
+  color: white;
+  text-align: left;
+  flex: 1;
+}
+
+.btnDone, .btnDelete {
+  border-radius: 5px;
+  background-color: #6781F1;
+  font-size: 100%;
+  width: 35px;
+  
+}
+
+
+.btnDone:hover, .btnDelete:hover {
+  color: white;
+  border: white solid 2px;
+}
+
+.btnDone i, .btnDelete i{
+  padding: 5px;
+}
+
+.remove {
+  animation: saida 0.5s ;
+}
+
+.done>.todoItem{
+  color: rgb(85, 67, 67) !important; 
+  text-decoration: line-through;
+}
+
+@keyframes entrada {
+  from {
+    opacity: 0;
+    transform: translateX(-70px)
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes saida {
+  from {
+    opacity: 1;
+    transform: translatex(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translatex(70px)
+  }
+}
+
+
+
+
+
+
+
